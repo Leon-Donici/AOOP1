@@ -7,11 +7,13 @@
         Title="AvaloniaExercisesSolution">
     
     <StackPanel>
-        <Grid ColumnDefinitions="50* 50*">
-            <StackPanel  Grid.Column="0" HorizontalAlignment="Left" Background="Blue">
+        <Grid ColumnDefinitions="70* 30*" RowDefinitions="Auto">
+            <StackPanel  Grid.Column="0" HorizontalAlignment="Stretch" Background="Blue" VerticalAlignment="Stretch">
                 <TextBlock Text="Welcome to Avalonia!" FontSize="18" HorizontalAlignment="Center" Margin="0,10"/>
+                <Button Content="Get Started" HorizontalAlignment="Center" Margin="0,10"/>
+                <Button Content="Learn More" HorizontalAlignment="Center" Margin="0,10"/>
             </StackPanel>
-            <StackPanel  Grid.Column="1" HorizontalAlignment="Right" Background="Brown">
+            <StackPanel  Grid.Column="1" HorizontalAlignment="Stretch" Background="Brown" VerticalAlignment="Stretch">
                 <TextBlock Text="Hello, Avalonia!" FontSize="24" HorizontalAlignment="Center" Margin="0,20"/>
                 <Button Content="Click Me" HorizontalAlignment="Center" Margin="0,10"/> 
             </StackPanel>
