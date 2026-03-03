@@ -4,139 +4,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaExercisesSolution.MainWindow"
-        Title="AvaloniaExercisesSolution">
-    
-<!-- 1. Define 3 Rows (Top, Middle, Bottom) and 2 Columns (80%, 20%) -->
-<Grid RowDefinitions="Auto, *, Auto" ColumnDefinitions="80*, 20*">
-        
-        <!-- TOP SECTION (Header) Grid.ColumnSpan="2" makes it stretch across both columns -->
-    <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White" TextElement.Foreground="Black">
-        <TextBlock Text="Color to move" FontSize="30" HorizontalAlignment="Left" Margin="30"/>
-    </StackPanel>
-        
-    <!-- MIDDLE LEFT SECTION (80% width) - 6x6 Grid Boxes -->
-        <Grid Grid.Row="1" Grid.Column="0" Background="White">
-    
-        <!-- 6x6 Grid structure for perfect sizing -->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        Title="Territory Game">
 
-        <!-- 36 white Border boxes with black borders -->
-        <Border Grid.Row="0" Grid.Column="0" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="0" Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="0" Grid.Column="2" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="0" Grid.Column="3" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="0" Grid.Column="4" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="0" Grid.Column="5" Background="White" BorderBrush="Black" BorderThickness="2"/>
+    <Grid RowDefinitions="Auto, *, Auto" ColumnDefinitions="70*, 30*">
 
-        <Border Grid.Row="1" Grid.Column="0" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="1" Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="1" Grid.Column="2" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="1" Grid.Column="3" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="1" Grid.Column="4" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="1" Grid.Column="5" Background="White" BorderBrush="Black" BorderThickness="2"/>
-
-        <Border Grid.Row="2" Grid.Column="0" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="2" Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="2" Grid.Column="2" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-        <Border Grid.Row="2" Grid.Column="3" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-        <Border Grid.Row="2" Grid.Column="4" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-        <Border Grid.Row="2" Grid.Column="5" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-
-        <Border Grid.Row="3" Grid.Column="0" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="3" Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="3" Grid.Column="2" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="3" Grid.Column="3" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="3" Grid.Column="4" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="3" Grid.Column="5" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-
-        <Border Grid.Row="4" Grid.Column="0" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="4" Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="4" Grid.Column="2" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-        <Border Grid.Row="4" Grid.Column="3" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-        <Border Grid.Row="4" Grid.Column="4" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-        <Border Grid.Row="4" Grid.Column="5" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-
-        <Border Grid.Row="5" Grid.Column="0" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="5" Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="2"/>
-        <Border Grid.Row="5" Grid.Column="2" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-        <Border Grid.Row="5" Grid.Column="3" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-        <Border Grid.Row="5" Grid.Column="4" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-        <Border Grid.Row="5" Grid.Column="5" Background="White" BorderBrush ="Black" BorderThickness="2"/>
-    </Grid>
-
-        
-       <!-- MIDDLE RIGHT SECTION (20% width) - Bigger Buttons -->
-    <StackPanel Grid.Row="1" Grid.Column="1" 
-            HorizontalAlignment="Stretch" 
-            Background="White" 
-            VerticalAlignment="Stretch"
-            TextElement.Foreground="Black">
-    
-    <Button Content="Play" 
-            Width="80" 
-            Height="50"
-            Foreground="Black"
-            Background="White"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center" 
-            Margin="0,10" 
-            BorderThickness="3"
-            BorderBrush="Black"/>
-    
-    <Button Content="Save" 
-            Width="80" 
-            Height="50"
-            Foreground="Black"
-            Background="White"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center" 
-            Margin="0,10" 
-            BorderThickness="3"
-            BorderBrush="Black"/>
-    
-    <Button Content="Load" 
-            Width="80" 
-            Height="50"
-            Foreground="Black"
-            Background="White"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center" 
-            Margin="0,10" 
-            BorderThickness="3"
-            BorderBrush="Black"/>
-    
-    <Button Content="Size" 
-            Width="80" 
-            Height="50"
-            Foreground="Black"
-            Background="White"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center" 
-            Margin="0,40" 
-            BorderThickness="3"
-            BorderBrush="Black"/>
-    </StackPanel>
-
-        
-        <!-- BOTTOM SECTION (Footer)
-             Grid.ColumnSpan="2" makes it stretch across both columns -->
-        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="White" TextElement.Foreground="Black">
-            <TextBlock Text="6x6" FontSize="30" HorizontalAlignment="Right" Margin="30"/>
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White">
+            <TextBlock x:Name="HeaderText" Text="Press Play to start" FontSize="30"
+                       Foreground="Black" HorizontalAlignment="Left" Margin="30,10"/>
         </StackPanel>
-        
+
+        <!-- Game Board -->
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="3" Margin="10" Background="White">
+            <Grid x:Name="GameBoard"/>
+        </Border>
+
+        <!-- Right Panel: Buttons + Scores + Leaderboard -->
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Background="White">
+            <StackPanel Margin="5">
+
+                <Button Content="Play"
+                        Width="80" Height="50"
+                        Foreground="Black" Background="White"
+                        HorizontalAlignment="Center"
+                        Margin="0,10" BorderThickness="3" BorderBrush="Black"
+                        Click="OnPlayClick"/>
+
+                <Button Content="Save"
+                        Width="80" Height="50"
+                        Foreground="Black" Background="White"
+                        HorizontalAlignment="Center"
+                        Margin="0,10" BorderThickness="3" BorderBrush="Black"
+                        Click="OnSaveClick"/>
+
+                <Button Content="Load"
+                        Width="80" Height="50"
+                        Foreground="Black" Background="White"
+                        HorizontalAlignment="Center"
+                        Margin="0,10" BorderThickness="3" BorderBrush="Black"
+                        Click="OnLoadClick"/>
+
+                <Button Content="Size"
+                        Width="80" Height="50"
+                        Foreground="Black" Background="White"
+                        HorizontalAlignment="Center"
+                        Margin="0,10" BorderThickness="3" BorderBrush="Black"
+                        Click="OnSizeClick"/>
+
+                <!-- Scores Section -->
+                <TextBlock Text="Scores" FontWeight="Bold" FontSize="14"
+                           Foreground="Black" Margin="5,15,5,3"/>
+                <StackPanel x:Name="ScoresPanel" Margin="5,0"/>
+
+                <!-- Leaderboard Section -->
+                <TextBlock Text="Leaderboard" FontWeight="Bold" FontSize="14"
+                           Foreground="Black" Margin="5,15,5,3"/>
+                <StackPanel x:Name="LeaderboardPanel" Margin="5,0"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="White">
+            <TextBlock x:Name="FooterText" Text="6x6" FontSize="30"
+                       Foreground="Black" HorizontalAlignment="Right" Margin="30,10"/>
+        </StackPanel>
+
     </Grid>
 </Window>
